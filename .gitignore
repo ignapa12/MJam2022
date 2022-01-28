@@ -70,3 +70,11 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 MJam2022/Temp/UnityLockfile
+
+# Rider
+'.idea'
+
+# Unity
+obj/
+Temp/
+Library/
