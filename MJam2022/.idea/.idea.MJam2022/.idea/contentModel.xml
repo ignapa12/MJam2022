@@ -9,7 +9,11 @@
         <e p="BeatTrack" t="Include">
           <e p="BeatTrackController.cs" t="Include" />
           <e p="NoteBehaviour.cs" t="Include" />
+          <e p="NoteEventRaiser.cs" t="Include" />
           <e p="NoteHolder.cs" t="Include" />
+        </e>
+        <e p="Utils" t="Include">
+          <e p="UnityEventsExtensions.cs" t="Include" />
         </e>
       </e>
       <e p="MJam2022.sln" t="IncludeFlat" />
