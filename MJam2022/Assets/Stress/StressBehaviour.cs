@@ -1,4 +1,5 @@
-﻿using MJam22.Beat;
+﻿using System.Collections.Generic;
+using MJam22.Beat;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,8 +10,8 @@ namespace MJam22.Stress
         [SerializeField] float maxStress;
         [SerializeField] StressView stressView;
 
-        [SerializeField] BeatTrackController beatTrackController;
-        
+        [SerializeField] List<BeatTrackController> beatTrackControllers;
+
         StressController stressController;
         UnityEvent OnMaxStress = new UnityEvent();
 
@@ -23,7 +24,11 @@ namespace MJam22.Stress
 
         void InitListeners()
         {
-            beatTrackController?.onNoteOutOfSight.AddListener((NoteBehaviour)=>AddStress(10));
+            foreach(var beatTrackController in beatTrackControllers)
+            {
+                beatTrackController.onNoteOutOfSight.AddListener((NoteBehaviour)=>AddStress(10));
+            }
+            
             OnMaxStress.AddListener(()=>Debug.Log("Max Stress"));
         }
 

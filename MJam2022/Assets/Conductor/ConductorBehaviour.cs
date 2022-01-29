@@ -7,6 +7,7 @@ namespace MJam22.Conductor
     {
         public UnityEvent<int> OnNewBeat = new UnityEvent<int>();
         public UnityEvent<float> OnUpdatedSongTemp = new UnityEvent<float>();
+        
         [SerializeField] float firstBeatOffset = 0;
         [SerializeField] float bpm = 62;
 

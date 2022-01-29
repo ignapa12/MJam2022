@@ -21,13 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1d8d7d7e-08c6-439c-8738-307baff614b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MJam2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MJam2022/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BeatTrack/BeatTrackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BeatTrack/BeatTrackController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BeatTrack/Prefabs/BeatTrack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BeatTrack/Prefabs/BeatTrack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BeatTrack/Prefabs/Note.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BeatTrack/Prefabs/Note.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Conductor/Conductor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Conductor/Conductor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Conductor/ConductorBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Conductor/ConductorBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stress/Prefabs/StressUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stress/Prefabs/StressUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stress/StressBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stress/StressBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +51,10 @@
         <option value="$PROJECT_DIR$/Assets/BeatTrack/NoteHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Stress/StressView.cs" />
         <option value="$PROJECT_DIR$/Assets/Stress/StressController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Stress/StressBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Conductor/Conductor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Conductor/ConductorBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/BeatTrack/BeatTrackController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Conductor/ConductorBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Stress/StressBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +103,7 @@
       <updated>1643400625940</updated>
       <workItem from="1643400633693" duration="5918000" />
       <workItem from="1643447608979" duration="9525000" />
+      <workItem from="1643472175576" duration="800000" />
     </task>
     <servers />
   </component>

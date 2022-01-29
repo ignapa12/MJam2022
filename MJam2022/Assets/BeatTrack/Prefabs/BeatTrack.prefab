@@ -271,11 +271,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputKey: 113
-  secondsToArrive: 1
+  secondsToArrive: 0.7
   NotePrefab: {fileID: 6166677543477946852, guid: 3d24e9523ab05c34aac79ccb402e9ebc, type: 3}
   NoteSpawnPosition: {fileID: 4708279188852636357}
   NoteEndPosition: {fileID: 3997537464887768382}
-  notesToSpawn: 0500000007000000090000000a0000000c0000000d0000000e00000012000000140000001600000018000000190000001a0000001e00000023000000280000002d00000032000000370000003c00000041000000
+  notesToSpawn:
+  - 7
+  - 12
+  - 22
+  - 37
+  - 41
+  - 42
+  - 50
+  - 52
+  - 60
 --- !u!1 &2933775227091567194
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2933775227091567194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2411297502641982765}
@@ -362,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4451773777460857933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 781982194}
