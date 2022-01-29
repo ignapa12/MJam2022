@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Utils;
@@ -7,15 +9,24 @@ namespace MJam22.Beat
     public class BeatTrackController : MonoBehaviour
     {
         [SerializeField] KeyCode inputKey;
-        public float beatTempo;
+        public float secondsToArrive;
         [SerializeField] GameObject NotePrefab;
         [SerializeField] Transform NoteSpawnPosition;
+        [SerializeField] Transform NoteEndPosition;
+        
+        [SerializeField] List<int> notesToSpawn;
 
-        readonly NoteHolder noteHolder = new NoteHolder();
+        NoteHolder noteHolder;
         
         #region Events
         readonly NoteBehaviourUnityEvent onNoteOutOfSight = new NoteBehaviourUnityEvent();
         #endregion
+
+        void Awake()
+        {
+            var distance = NoteEndPosition.transform.position.y - NoteSpawnPosition.transform.position.y;
+            noteHolder = new NoteHolder(distance);
+        }
 
         void Start()
         {
@@ -25,7 +36,6 @@ namespace MJam22.Beat
         void Update()
         {
             MoveNotes();
-            TrySpawnNote();
             TryClearNotes();
         }
 
@@ -36,13 +46,26 @@ namespace MJam22.Beat
 
         void MoveNotes()
         {
-            noteHolder.MoveNotes(beatTempo);
+            noteHolder.MoveNotes(secondsToArrive);
         }
 
-        void TrySpawnNote()
+        #region Spawn
+        public void TrySpawnNote(float songPosSec)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            TrySpawnNote(songPosSec, secondsToArrive);
+        }
+        
+        void TrySpawnNote(float songPosSec, float travelSeconds)
+        {
+            var nextNoteBeat = notesToSpawn.First();
+            if((songPosSec + travelSeconds) >= nextNoteBeat)
+            {
+                Debug.Log($"Next note Beat: {nextNoteBeat}");
+                Debug.Log($"Estimated Beat: {songPosSec+travelSeconds}");
+                Debug.Log($"Spawn time: {songPosSec}");
+                notesToSpawn.RemoveAt(0);
                 SpawnNote();
+            }
         }
 
         void SpawnNote()
@@ -51,7 +74,9 @@ namespace MJam22.Beat
             note.SetOnOutOfSight(onNoteOutOfSight);
             noteHolder.AddNote(note);
         }
+        #endregion
 
+        #region Clear
         void TryClearNotes()
         {
             if(Input.GetKeyDown(inputKey))
@@ -81,5 +106,10 @@ namespace MJam22.Beat
             noteHolder.RemoveNotes(note);
             Destroy(note.gameObject);
         }
+        #endregion
+        
+        #region SupportMethods
+        
+        #endregion
     }   
 }
