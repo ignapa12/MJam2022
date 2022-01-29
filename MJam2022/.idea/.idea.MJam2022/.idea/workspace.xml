@@ -23,10 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MJam2022/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MJam2022/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MJam2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MJam2022/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BeatTrack/BeatTrackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BeatTrack/BeatTrackController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BeatTrack/NoteHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BeatTrack/NoteHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BeatTrack/Prefabs/BeatTrack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BeatTrack/Prefabs/BeatTrack.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,10 @@
         <option value="$PROJECT_DIR$/Assets/Conductor/Conductor.cs" />
         <option value="$PROJECT_DIR$/Assets/BeatTrack/NoteHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Conductor/ConductorBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Stress/StressView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Stress/StressController.cs" />
         <option value="$PROJECT_DIR$/Assets/BeatTrack/BeatTrackController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Stress/StressBehaviour.cs" />
       </list>
     </option>
   </component>

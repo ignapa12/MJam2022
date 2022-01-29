@@ -16,6 +16,11 @@
           <e p="Conductor.cs" t="Include" />
           <e p="ConductorBehaviour.cs" t="Include" />
         </e>
+        <e p="Stress" t="Include">
+          <e p="StressBehaviour.cs" t="Include" />
+          <e p="StressController.cs" t="Include" />
+          <e p="StressView.cs" t="Include" />
+        </e>
         <e p="Utils" t="Include">
           <e p="UnityEventsExtensions.cs" t="Include" />
         </e>

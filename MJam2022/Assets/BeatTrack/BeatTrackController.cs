@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -19,7 +18,7 @@ namespace MJam22.Beat
         NoteHolder noteHolder;
         
         #region Events
-        readonly NoteBehaviourUnityEvent onNoteOutOfSight = new NoteBehaviourUnityEvent();
+        public readonly NoteBehaviourUnityEvent onNoteOutOfSight = new NoteBehaviourUnityEvent();
         #endregion
 
         void Awake()
