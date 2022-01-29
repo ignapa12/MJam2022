@@ -13,7 +13,7 @@ namespace MJam22.Beat
             currentNotes = new List<NoteBehaviour>();
         }
 
-        public void AddNote(GameObject note) => currentNotes.Add(note.GetComponent<NoteBehaviour>());
+        public void AddNote(NoteBehaviour note) => currentNotes.Add(note);
 
         public void MoveNotes(float beatTempo)
         {
@@ -28,11 +28,13 @@ namespace MJam22.Beat
             return currentNotes.Where(note => note.CanBePressed);
         }
 
+        public void RemoveNotes(NoteBehaviour note) => currentNotes.Remove(note);
+
         public void RemoveNotes(List<NoteBehaviour> notes)
         {
             foreach(var note in notes)
             {
-                currentNotes.Remove(note);
+                RemoveNotes(note);
             }
         }
     }

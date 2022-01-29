@@ -10,6 +10,14 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+/MJam2022/[Ll]ibrary/
+/MJam2022/[Tt]emp/
+/MJam2022/[Oo]bj/
+/MJam2022/[Bb]uild/
+/MJam2022/[Bb]uilds/
+/MJam2022/[Ll]ogs/
+/MJam2022/[Uu]ser[Ss]ettings/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -78,3 +86,4 @@ MJam2022/Temp/UnityLockfile
 obj/
 Temp/
 Library/
+Logs/

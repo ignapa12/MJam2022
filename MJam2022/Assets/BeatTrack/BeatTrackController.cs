@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using Utils;
 
 namespace MJam22.Beat
 {
@@ -9,14 +10,28 @@ namespace MJam22.Beat
         public float beatTempo;
         [SerializeField] GameObject NotePrefab;
         [SerializeField] Transform NoteSpawnPosition;
+
+        readonly NoteHolder noteHolder = new NoteHolder();
         
-        NoteHolder noteHolder = new NoteHolder();
+        #region Events
+        readonly NoteBehaviourUnityEvent onNoteOutOfSight = new NoteBehaviourUnityEvent();
+        #endregion
+
+        void Start()
+        {
+            InitListeners();
+        }
 
         void Update()
         {
             MoveNotes();
             TrySpawnNote();
             TryClearNotes();
+        }
+
+        void InitListeners()
+        {
+            onNoteOutOfSight.AddListener(FailNote);
         }
 
         void MoveNotes()
@@ -32,7 +47,8 @@ namespace MJam22.Beat
 
         void SpawnNote()
         {
-            var note = Instantiate(NotePrefab, NoteSpawnPosition);
+            var note = Instantiate(NotePrefab, NoteSpawnPosition).GetComponent<NoteBehaviour>();
+            note.SetOnOutOfSight(onNoteOutOfSight);
             noteHolder.AddNote(note);
         }
 
@@ -46,12 +62,24 @@ namespace MJam22.Beat
         {
             var notesToClear = noteHolder.GetActivatedNotes().ToList();
             Debug.Log($"{notesToClear.Count} notes to clear");
-            noteHolder.RemoveNotes(notesToClear);
-            
-            foreach(var note in notesToClear)
+
+            if(notesToClear.Any())
             {
-                Destroy(note.gameObject);
+                var note = notesToClear.First();
+                RemoveNote(note);
             }
+        }
+
+        void FailNote(NoteBehaviour note)
+        {
+            RemoveNote(note);
+            Debug.Log("Aumenta el estres");
+        }
+
+        void RemoveNote(NoteBehaviour note)
+        {
+            noteHolder.RemoveNotes(note);
+            Destroy(note.gameObject);
         }
     }   
 }
