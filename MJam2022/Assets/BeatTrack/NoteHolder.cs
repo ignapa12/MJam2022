@@ -7,19 +7,21 @@ namespace MJam22.Beat
     public class NoteHolder
     {
         List<NoteBehaviour> currentNotes;
+        float distance;
 
-        public NoteHolder()
+        public NoteHolder(float distance)
         {
             currentNotes = new List<NoteBehaviour>();
+            this.distance = distance;
         }
 
         public void AddNote(NoteBehaviour note) => currentNotes.Add(note);
 
-        public void MoveNotes(float beatTempo)
+        public void MoveNotes(float secondsToArrive)
         {
             foreach(var note in currentNotes)
             {
-                note.transform.position -= new Vector3(0f, beatTempo/60f * Time.deltaTime, 0f);
+                note.transform.position += new Vector3(0f, distance / secondsToArrive * Time.deltaTime, 0f);
             }
         }
 

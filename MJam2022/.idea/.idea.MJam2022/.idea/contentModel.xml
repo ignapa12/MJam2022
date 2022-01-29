@@ -12,6 +12,10 @@
           <e p="NoteEventRaiser.cs" t="Include" />
           <e p="NoteHolder.cs" t="Include" />
         </e>
+        <e p="Conductor" t="Include">
+          <e p="Conductor.cs" t="Include" />
+          <e p="ConductorBehaviour.cs" t="Include" />
+        </e>
         <e p="Utils" t="Include">
           <e p="UnityEventsExtensions.cs" t="Include" />
         </e>
