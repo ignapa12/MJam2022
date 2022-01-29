@@ -13,7 +13,7 @@ namespace MJam22.Beat
         [SerializeField] Transform NoteSpawnPosition;
         [SerializeField] Transform NoteEndPosition;
         
-        [SerializeField] List<int> notesToSpawn;
+        [SerializeField] List<float> notesToSpawn;
 
         NoteHolder noteHolder;
         
@@ -57,10 +57,11 @@ namespace MJam22.Beat
         void TrySpawnNote(float songPosSec, float travelSeconds)
         {
             var nextNoteBeat = notesToSpawn.First();
-            if((songPosSec + travelSeconds) >= nextNoteBeat)
+            var travelBeat = travelSeconds / (60 / 126f);
+            if((songPosSec + travelBeat) >= nextNoteBeat)
             {
                 Debug.Log($"Next note Beat: {nextNoteBeat}");
-                Debug.Log($"Estimated Beat: {songPosSec+travelSeconds}");
+                Debug.Log($"Estimated Beat: {songPosSec+travelBeat}");
                 Debug.Log($"Spawn time: {songPosSec}");
                 notesToSpawn.RemoveAt(0);
                 SpawnNote();

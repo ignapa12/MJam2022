@@ -13,6 +13,7 @@ namespace MJam22.Conductor
         [SerializeField] AudioSource musicSource;
 
         Conductor conductor;
+        float beatOffset;
 
         void Awake()
         {
@@ -22,16 +23,18 @@ namespace MJam22.Conductor
         void Start()
         {
             conductor.StartSong();
+            beatOffset = firstBeatOffset;
         }
 
         void FixedUpdate()
         {
+            beatOffset = firstBeatOffset + Time.fixedDeltaTime;
             UpdateSongPosition();
         }
 
         void UpdateSongPosition()
         {
-            conductor.UpdateSongPosition(firstBeatOffset);
+            conductor.UpdateSongPosition(beatOffset);
         }
     }
 }

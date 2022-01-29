@@ -44,7 +44,7 @@ namespace MJam22.Conductor
             songPosSec = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
             songPosBeat = songPosSec / secPerBeat;
 
-            onUpdatedSongTemp.Invoke(songPosSec);
+            onUpdatedSongTemp.Invoke(songPosBeat);
             var roundToInt = Mathf.RoundToInt(songPosBeat);
             
             if(roundToInt!=lastBeat)
